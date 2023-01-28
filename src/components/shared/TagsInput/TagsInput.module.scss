@@ -1,0 +1,19 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  display: flex;
+  overflow: hidden;
+}
+
+.cont {
+  display: flex;
+  width: max-content;
+
+  & > span + span {
+    margin-left: 5px;
+  }
+}
+
+.status {
+  padding: 1px 0;
+}

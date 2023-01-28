@@ -1,0 +1,30 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid #e0e0e0;
+}
+
+.label {
+  padding-right: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Public Sans', 'Roboto', sans-serif !important;
+  line-height: 17px;
+}
+
+.tooltip {
+  margin-right: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -6px;
+  padding-right: 40px;
+}
+
+.input {
+  width: 70px;
+}

@@ -1,0 +1,225 @@
+@import 'assets/scss/vars';
+
+.top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  margin-bottom: 15px;
+  padding-right: 1px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $border;
+  cursor: move;
+
+  &:before {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    bottom: 4px;
+    left: -6px;
+    background-color: currentColor;
+    border-radius: 5px;
+    transform: scale(0.85);
+    opacity: 0;
+    transition: $all;
+    content: '';
+  }
+
+  &:hover {
+    &:before {
+      transform: none;
+      opacity: 0.05;
+    }
+
+    &:not(.isDragging):not(.isEditColor):not(.disableEdit) {
+      .total {
+        opacity: 0;
+        transition: $all;
+      }
+
+      .buttons {
+        transform: none;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.isDragging,
+  &.isEditColor {
+    &:before {
+      opacity: 0;
+    }
+
+    .buttons {
+      transform: scale(0.95);
+      opacity: 0 !important;
+      pointer-events: none;
+    }
+  }
+
+  &.disableDrag {
+    cursor: default;
+  }
+}
+
+.isStatic {
+  cursor: default;
+}
+
+.disableEdit {
+  cursor: default;
+
+  &:before {
+    display: none;
+  }
+
+  .buttons {
+    display: none;
+  }
+}
+
+.topCont {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: calc(100% - 50px) 40px;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.topLeft {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.total {
+  min-width: 21px;
+  height: 21px;
+  padding: 3px 7px;
+  overflow: hidden;
+  color: $grayHover;
+  font-size: 13px;
+  white-space: nowrap;
+  text-align: center;
+  text-overflow: ellipsis;
+  background-color: $lightBg;
+  border-radius: 11px;
+  transition: 250ms ease 50ms;
+}
+
+.buttons {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: $all;
+}
+
+.button {
+  transition: $all;
+
+  svg {
+    opacity: 0.7;
+    transition: $all;
+  }
+
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
+
+  & + & {
+    margin-left: 5px;
+  }
+}
+
+.buttonSave {
+  position: absolute;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: $all;
+  pointer-events: none;
+
+  svg {
+    transition: $all;
+  }
+}
+
+.input {
+  position: absolute;
+  top: -6px;
+  right: -40px;
+  bottom: -6px;
+  left: -6px;
+  padding: 0 8px 0 14px;
+  font-weight: 600;
+  background-color: $transparent;
+  border: 0;
+  opacity: 0;
+  transition: $all;
+  pointer-events: none;
+}
+
+.isEditName {
+  cursor: default;
+
+  &:before {
+    transform: none;
+    opacity: 0.05;
+  }
+
+  .title {
+    opacity: 0;
+  }
+
+  .total {
+    opacity: 0;
+    transition: $all;
+  }
+
+  .buttons {
+    transform: scale(0.95);
+    opacity: 0 !important;
+    pointer-events: none;
+  }
+
+  .input {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .buttonSave {
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+
+    svg {
+      opacity: 0.7;
+    }
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.popover {
+  position: absolute;
+  top: 53px;
+  z-index: 2;
+}

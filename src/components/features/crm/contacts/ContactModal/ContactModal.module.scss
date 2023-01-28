@@ -1,0 +1,61 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  width: 1100px;
+  max-width: 1100px;
+  min-height: 539px;
+}
+
+.cont {
+  display: flex;
+  padding-bottom: 0;
+}
+
+.left {
+  width: calc(100% - 440px);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-left: 40px;
+  padding-left: 40px;
+  border-left: 1px solid $border;
+}
+
+.leadsWrap {
+  margin: 20px 0 0;
+}
+
+.leads {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 260px;
+  padding-top: 0;
+  padding-right: 10px;
+  overflow-y: auto;
+}
+
+.lead {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid $border;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 200ms ease;
+  user-select: none;
+
+  &:hover {
+    box-shadow: $shadow2;
+  }
+}
+
+.noData {
+  display: flex;
+  margin-top: 2px;
+}

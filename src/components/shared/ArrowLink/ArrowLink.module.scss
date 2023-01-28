@@ -1,0 +1,25 @@
+@import 'assets/scss/vars';
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  color: $primary;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: $shadow7;
+  opacity: 0;
+  transition: $all;
+  pointer-events: none;
+
+  svg {
+    font-size: 16px;
+  }
+}

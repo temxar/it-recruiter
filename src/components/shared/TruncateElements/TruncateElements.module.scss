@@ -1,0 +1,10 @@
+@import 'assets/scss/vars';
+
+.ellipsis {
+  display: inline-block;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}

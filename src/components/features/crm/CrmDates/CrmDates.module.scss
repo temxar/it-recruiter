@@ -1,0 +1,15 @@
+@import 'assets/scss/vars';
+
+.dates {
+  margin-left: 30px;
+}
+
+.date {
+  color: $grayDark;
+  font-weight: 400;
+  font-size: 14px;
+
+  & + .date {
+    margin-left: 20px;
+  }
+}

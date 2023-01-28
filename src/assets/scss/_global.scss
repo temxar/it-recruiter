@@ -1,0 +1,96 @@
+@import 'vars';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  outline: 0;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll,
+.MuiPopover-paper.MuiMenu-paper {
+  overflow: hidden auto;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: $superLight;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    width: 5px;
+    background: $superLight;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $grayBg;
+    border-radius: 2px;
+    transition: $all;
+
+    &:hover {
+      background-color: $grayBgHover;
+    }
+
+    &:active {
+      background-color: $grayLight;
+    }
+  }
+}
+
+.scrollHorizontal {
+  overflow: auto hidden;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+    background-color: $superLight;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    height: 8px;
+    background-color: $superLight;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $grayBg;
+    border-radius: 4px;
+    transition: $all;
+
+    &:hover {
+      background-color: $grayBgHover;
+    }
+
+    &:active {
+      background-color: $grayLight;
+    }
+  }
+}

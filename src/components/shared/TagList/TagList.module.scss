@@ -1,0 +1,29 @@
+.wrap {
+  max-width: 100%;
+  margin: 0 -5px 0 0;
+  overflow: hidden;
+}
+
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 5px);
+
+  & > span {
+    margin: 0 5px 5px 0;
+  }
+}
+
+.more {
+  margin: 0 -5px -4px;
+  font-size: 16px;
+}
+
+.ellipsis {
+  margin-top: 1px;
+  overflow: initial;
+}
+
+.ellipsisWrap {
+  display: block;
+}

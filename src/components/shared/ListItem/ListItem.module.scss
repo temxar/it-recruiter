@@ -1,0 +1,18 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  min-height: 45px;
+  padding: 12px 16px;
+  line-height: 19px;
+  background: #fff;
+  border: 1px solid $border;
+  border-radius: 5px;
+
+  & + & {
+    margin-top: 10px;
+  }
+}

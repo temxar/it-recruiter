@@ -1,0 +1,94 @@
+@import 'assets/scss/vars';
+
+.notifications {
+  width: 380px;
+}
+
+.badge {
+  top: 7px;
+  right: 7px;
+}
+
+.icon {
+  color: $default;
+}
+
+.list {
+  height: calc(100% - 97px);
+  padding: 0;
+  overflow: auto;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 0;
+  background-color: #fff;
+  border-top: 1px solid #e4e5e9;
+}
+
+.drawer {
+  position: relative;
+  min-width: 320px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.itemCont {
+  display: flex;
+  align-items: center;
+}
+
+.delete {
+  position: absolute;
+  top: 4px;
+  right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 6px;
+}
+
+.deleteAll {
+  width: 26px;
+  height: 26px;
+}
+
+.loading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+}
+
+.circle {
+  margin-right: 6px;
+  font-size: 12px;
+}
+
+.message {
+  margin-left: 10px;
+  padding-right: 25px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clear {
+  margin-right: 16px;
+}

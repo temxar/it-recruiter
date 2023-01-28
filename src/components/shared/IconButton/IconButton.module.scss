@@ -1,0 +1,17 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba($border, 0.7);
+  border-radius: 5px;
+}
+
+.circle {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: $greenSuperLight;
+  font-size: 8px;
+}

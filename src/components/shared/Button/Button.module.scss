@@ -1,0 +1,220 @@
+@import 'assets/scss/vars';
+
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px 12px;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: $all;
+  will-change: opacity;
+
+  &[disabled] {
+    cursor: default !important;
+    opacity: 0.3 !important;
+    pointer-events: none !important;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    opacity: 0.08;
+    transition: $all;
+    content: '';
+  }
+
+  &:hover {
+    &:before {
+      opacity: 0.1;
+    }
+  }
+}
+
+.text {
+  transition: all 300ms ease;
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -5px 0;
+
+  svg {
+    font-size: 20px;
+  }
+
+  & + .text {
+    margin-left: 10px;
+  }
+}
+
+.iconSvg {
+  display: flex;
+  transition: all 300ms ease;
+}
+
+.loader {
+  position: absolute;
+  color: currentColor;
+  transition: $all;
+
+  svg {
+    color: currentColor;
+  }
+}
+
+.loading {
+  opacity: 0.6;
+  filter: saturate(0.4);
+  pointer-events: none;
+
+  .iconSvg {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  &.noIcon {
+    .text {
+      opacity: 0.12;
+    }
+  }
+}
+
+.small {
+  padding: 5px;
+  font-size: 14px;
+
+  .icon {
+    margin: 0;
+
+    svg {
+      font-size: 19px;
+    }
+  }
+}
+
+.mini {
+  padding: 5px 12px 6px;
+  font-size: 14px;
+
+  .icon {
+    margin: 0;
+
+    svg {
+      font-size: 16px;
+    }
+
+    & + .text {
+      margin-left: 6px;
+    }
+  }
+}
+
+.medium {
+  padding: 7px 14px 8px;
+  font-size: 14px;
+
+  .icon {
+    margin: 0;
+
+    svg {
+      font-size: 18px;
+    }
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.white {
+  color: $lightText;
+  box-shadow: $shadow4;
+
+  &:before {
+    background-color: #fff;
+  }
+}
+
+.defaultColor {
+  color: $default;
+}
+
+.blue {
+  color: $primary;
+}
+
+.blueDark {
+  color: $blueDark;
+}
+
+.greenDark {
+  color: $greenDark;
+}
+
+.green {
+  color: $green;
+}
+
+.turquoise {
+  color: $turquoise;
+}
+
+.brown {
+  color: $brown;
+}
+
+.orange {
+  color: $orange;
+}
+
+.darkOrange {
+  color: $darkOrange;
+}
+
+.orangeRed {
+  color: $orangeRed;
+}
+
+.red {
+  color: $red;
+}
+
+.error {
+  color: $error;
+}
+
+.purple {
+  color: $purple;
+}
+
+.purpleDark {
+  color: $purpleDark;
+}
+
+.violet {
+  color: $violet;
+}
+
+.primary {
+  color: $primary;
+}

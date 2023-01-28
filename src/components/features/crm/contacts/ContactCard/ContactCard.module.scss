@@ -1,0 +1,26 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: $all, margin-top 0s ease;
+  user-select: none;
+
+  &:hover {
+    background-color: $superLight2;
+    border-color: $borderDark;
+  }
+}
+
+.item {
+  & + & {
+    margin-top: 6px;
+  }
+}
+
+.name {
+  font-weight: 500;
+  font-size: 14px;
+}

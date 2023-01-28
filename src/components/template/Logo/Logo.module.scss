@@ -1,0 +1,17 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 100%;
+  background-color: $primary;
+  border-radius: 0 0 18px 0;
+}
+
+.logo {
+  box-sizing: border-box;
+  width: 90px;
+  height: 29px;
+}

@@ -1,0 +1,37 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  position: relative;
+  left: -30px;
+  z-index: 1;
+  width: 320.5px;
+  padding: 25px 30px 30px 30px;
+  color: $text;
+  background: #fff;
+  border: 1px solid $light;
+  border-radius: 10px;
+  box-shadow: $shadow3;
+  transform: scale(0.95);
+  transform-origin: top;
+  opacity: 0;
+  transition: $all;
+  user-select: none;
+  pointer-events: none;
+  will-change: opacity;
+}
+
+.open {
+  pointer-events: auto;
+}
+
+.title {
+  margin-bottom: 25px;
+  color: $lightText;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}

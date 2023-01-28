@@ -1,0 +1,55 @@
+@import 'assets/scss/vars';
+
+.tag {
+  margin: -1px 0;
+}
+
+.bottom {
+  margin-top: 15px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:hover {
+    .buttons {
+      transform: none;
+      opacity: 1;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: -5px -7px -5px 0;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: $all;
+}
+
+.button {
+  transition: $all;
+
+  svg {
+    opacity: 0.7;
+    transition: $all;
+  }
+
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
+
+  & + & {
+    margin-left: 5px;
+  }
+}
+
+.check {
+  margin-right: 10px;
+}

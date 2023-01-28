@@ -1,0 +1,15 @@
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -5px;
+  overflow: hidden;
+}
+
+.chip {
+  height: 22px !important;
+  margin: 0 5px 5px 0;
+}
+
+.input {
+  padding: 4px 65px 5px 10px !important;
+}

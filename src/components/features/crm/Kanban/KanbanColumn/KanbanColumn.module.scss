@@ -1,0 +1,201 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  position: relative;
+  width: 297px;
+  height: 100%;
+  padding: 20px;
+  transition: opacity 200ms ease, left 200ms ease;
+  user-select: none;
+
+  &:before {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    bottom: 10px;
+    left: 5px;
+    background-color: $lightBg;
+    border-radius: 10px;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: opacity 200ms ease, transform 200ms ease;
+    content: '';
+    will-change: opacity;
+  }
+
+  &[data-drag] {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.8;
+
+    &.isStaticColumn {
+      opacity: 0.3;
+    }
+  }
+
+  &.isDragging {
+    position: absolute;
+    z-index: 2;
+    opacity: 1;
+    transition: none;
+
+    &:before {
+      top: 9px;
+      right: 4px;
+      bottom: auto;
+      left: 7px;
+      height: 120px;
+      background-color: #fff;
+      box-shadow: 0 0 0 1px $borderDark, $shadow3;
+      transform: none;
+      opacity: 1;
+      transition: opacity 280ms ease, transform 280ms ease;
+    }
+
+    .move {
+      animation: numShow 250ms forwards;
+    }
+  }
+
+  &.hideCont {
+    .cont {
+      .scroll {
+        transform: scaleY(0.3);
+        opacity: 0;
+      }
+    }
+  }
+
+  &.openedPopover {
+    .overlay {
+      opacity: 1;
+      backdrop-filter: blur(4px);
+      pointer-events: auto;
+    }
+  }
+
+  &.openedOverlay {
+    position: initial;
+
+    .top {
+      z-index: 7;
+    }
+  }
+}
+
+.active {
+  &:before {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.cont {
+  position: relative;
+  z-index: 1;
+  width: calc(100% + 24px);
+  height: calc(100% - 45px);
+  margin: 0 0 0 -12px;
+  overflow: hidden;
+}
+
+.scroll {
+  height: 100%;
+  padding: 0 12px;
+  overflow: hidden auto;
+  overflow: hidden overlay;
+  transform-origin: top;
+  transition: opacity 150ms ease, transform 300ms ease;
+}
+
+.move {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  left: 12px;
+  z-index: 2;
+  color: $gray;
+  font-size: 14px;
+  text-align: center;
+  transform: scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes numShow {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  40% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.placeholder {
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  width: 280px;
+  margin-left: 10px;
+  background-color: $lightBgDark;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px $borderDarkBlue;
+  transform-origin: top;
+  transition: $all;
+  animation: placeholder 400ms forwards;
+}
+
+@keyframes placeholder {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  15% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 6;
+  background-color: rgba(#fff, 0.8);
+  opacity: 0;
+  transition: $all;
+  pointer-events: none;
+}
+
+.loader {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-left: -17px;
+  color: $default;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: $shadow7;
+}

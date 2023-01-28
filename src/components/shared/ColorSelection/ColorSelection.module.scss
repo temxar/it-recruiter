@@ -1,0 +1,67 @@
+@import 'assets/scss/vars';
+
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  width: 270px;
+  margin: 0 -12px -12px 0;
+}
+
+.color {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin: 0 12px 12px 0;
+  background-color: currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: $all;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    border-radius: 50%;
+    opacity: 0.2;
+    transition: $all;
+    content: '';
+  }
+
+  &.active {
+    &:before {
+      transform: scale(1.5);
+    }
+  }
+
+  svg {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 12px;
+    transform: scale(0.5);
+    opacity: 0;
+    animation: showMark 200ms forwards;
+  }
+}
+
+@keyframes showMark {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}

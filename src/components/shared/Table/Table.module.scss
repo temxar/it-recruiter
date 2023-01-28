@@ -1,0 +1,14 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  position: relative;
+  height: calc(100% - 76px);
+  overflow: hidden;
+  border-top: 1px solid $border;
+  border-left: 1px solid $border;
+  border-radius: 4px 0 0 0 !important;
+}
+
+.loader {
+  margin-top: -80px;
+}

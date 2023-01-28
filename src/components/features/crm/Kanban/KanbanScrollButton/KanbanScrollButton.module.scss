@@ -1,0 +1,50 @@
+@import 'assets/scss/vars';
+
+.button {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 250ms ease;
+  user-select: none;
+
+  &:hover {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+
+    .icon {
+      opacity: 0.8;
+    }
+  }
+}
+
+.icon {
+  font-size: 28px;
+  opacity: 0.7;
+  transition: $all;
+}
+
+.prev {
+  left: 34px;
+
+  &.hide {
+    left: -50px;
+  }
+}
+
+.next {
+  right: 10px;
+
+  &.hide {
+    right: -74px;
+  }
+}

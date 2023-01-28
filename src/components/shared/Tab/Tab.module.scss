@@ -1,0 +1,66 @@
+@import 'assets/scss/vars';
+
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 16px 10px 16px;
+  color: $default;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: $font;
+  text-transform: none;
+  border-radius: 30px;
+  transition: $all;
+
+  &:hover {
+    color: $defaultHover;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    border-radius: 30px;
+    transform: scale(0.85);
+    opacity: 0;
+    transition: all 200ms ease;
+    content: '';
+  }
+
+  &.selected {
+    color: $default;
+
+    &:before {
+      transform: none;
+      opacity: 0.06;
+    }
+  }
+}
+
+.cont {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    font-size: 19px;
+  }
+
+  & + .label {
+    margin-left: 8px;
+  }
+}

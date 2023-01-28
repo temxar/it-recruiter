@@ -1,0 +1,19 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 15px;
+  color: $lightText;
+  font-size: 16px;
+  line-height: 22px;
+
+  svg {
+    margin-top: 2px;
+    font-size: 30px;
+  }
+}
+
+.inModal {
+  padding: 23px 60px 24px 30px;
+}

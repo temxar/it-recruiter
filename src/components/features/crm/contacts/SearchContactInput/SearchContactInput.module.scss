@@ -1,0 +1,23 @@
+@import 'assets/scss/vars';
+
+.update {
+  margin-right: 20px;
+}
+
+.search {
+  width: 350px;
+  padding-right: 25px;
+}
+
+.clear {
+  margin-right: -10px;
+}
+
+.searchIcon:hover {
+  background-color: $transparent;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}

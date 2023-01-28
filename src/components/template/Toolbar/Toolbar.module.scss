@@ -1,0 +1,42 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  position: relative;
+  display: flex;
+  height: 70px;
+  min-height: 70px;
+
+  &:after {
+    position: absolute;
+    right: 24px;
+    bottom: 0;
+    left: 24px;
+    height: 1px;
+    background-color: $border;
+    content: '';
+  }
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $primaryBg;
+}
+
+.bar {
+  background-color: rgba($default, 0.3);
+}
+
+.cont {
+  display: flex;
+}
+
+.title {
+  margin: 0;
+  padding-right: 30px;
+  color: $default;
+  font-weight: 500;
+  font-size: 22px;
+}

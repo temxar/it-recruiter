@@ -1,0 +1,28 @@
+@import 'assets/scss/vars';
+
+.wrap,
+.cont {
+  height: calc(100% - 64px);
+}
+
+.tableModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: calc(100% - 71px);
+  margin-left: 24px;
+  border-bottom: 1px solid $border;
+}
+
+.paginate {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 24px !important;
+  border-top: 1px solid #e4e5e9;
+}
+
+.buttonCont {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+}

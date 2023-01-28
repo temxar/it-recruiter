@@ -1,0 +1,20 @@
+@import 'assets/scss/vars';
+
+.menu {
+  flex-direction: column;
+  justify-content: start;
+  min-width: 130px;
+  height: 100%;
+  padding: 16px;
+}
+
+.loadingMenu {
+  button {
+    display: none;
+  }
+}
+
+.item {
+  flex: none;
+  height: 72px;
+}

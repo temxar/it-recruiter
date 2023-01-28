@@ -1,0 +1,81 @@
+@import 'assets/scss/vars';
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.chip {
+  height: 22px !important;
+  cursor: pointer !important;
+
+  & + & {
+    margin-left: 5px;
+  }
+}
+
+.noWrap {
+  flex-wrap: nowrap;
+  margin-bottom: -5px;
+  overflow: hidden;
+
+  .chip {
+    margin: 0 5px 5px 0 !important;
+  }
+}
+
+.input {
+  padding: 9px 30px 8px 14px !important;
+
+  &.standard {
+    padding-top: 5px !important;
+    padding-left: 0 !important;
+  }
+}
+
+.search {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  left: 16px;
+}
+
+.menu {
+  padding-top: 55px;
+}
+
+.inputSearch {
+  input {
+    padding: 6px 0;
+  }
+}
+
+.clear {
+  &:hover {
+    background-color: $transparent;
+
+    .clearIcon {
+      color: $default;
+    }
+  }
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.searchIcon {
+  margin-right: 7px;
+  color: $gray;
+  font-size: 20px;
+}
+
+.clearIcon {
+  color: $gray;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}

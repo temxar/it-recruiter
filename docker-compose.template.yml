@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  front:
+    restart: always
+    image: git.###.ru:5050/bot-recruiter/recruiter-front:${CONTAINER_IMAGE_TAG}
+    container_name: ###-app
+    volumes:
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+    labels:
+      - "io.portainer.accesscontrol.users=###"
+    ports:
+      - ${APP_PORT}:8000

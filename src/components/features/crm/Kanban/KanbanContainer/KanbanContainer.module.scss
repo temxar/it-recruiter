@@ -1,0 +1,52 @@
+.wrap {
+  position: relative;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  width: calc(100% + 24px);
+  height: 100%;
+  margin: -10px 0 0 -24px;
+  overflow: hidden;
+
+  &:not(.wrap:hover) {
+    .scrollButtonPrev {
+      left: -50px;
+    }
+
+    .scrollButtonNext {
+      right: -74px;
+    }
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 10px;
+    left: 0;
+    z-index: 6;
+    width: 24px;
+    background: #fff;
+    content: '';
+  }
+}
+
+.scroll0 {
+  &:before {
+    display: none;
+  }
+}
+
+.scroll {
+  display: flex;
+  flex: 1 0 auto;
+  height: 100%;
+  padding: 0 4px;
+  overflow: auto hidden;
+}
+
+.cont {
+  position: relative;
+  display: flex;
+  flex: 1 0 auto;
+  width: max-content;
+}

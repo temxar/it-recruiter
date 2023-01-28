@@ -1,0 +1,63 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid $border;
+  border-radius: 5px;
+  transform: scale(0.95);
+  cursor: pointer;
+  opacity: 0;
+  user-select: none;
+  will-change: opacity;
+
+  &:hover {
+    box-shadow: $shadow2;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.isDragging {
+  position: absolute;
+  z-index: 2;
+  box-shadow: $shadow3 !important;
+}
+
+.ready {
+  transform: none;
+  opacity: 1;
+}
+
+.readyByColumn {
+  transform: scale(0.95);
+  opacity: 0;
+  animation: readyByColumn 500ms forwards;
+}
+
+@keyframes readyByColumn {
+  0% {
+    border: 1px solid $border;
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  40% {
+    border: 1px solid $lightBlue;
+  }
+
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+
+  100% {
+    border: 1px solid $border;
+    transform: none;
+    opacity: 1;
+  }
+}

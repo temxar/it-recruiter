@@ -1,0 +1,50 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cont {
+  flex: 1 0 auto;
+  height: calc(100% - 63px);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topModal {
+  margin-top: -5px;
+}
+
+.paginate {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 24px !important;
+  border-top: 1px solid $border;
+}
+
+.buttonCont {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.tableModal {
+  max-height: calc(100% - 71px);
+  border-bottom: 1px solid $border;
+}
+
+.checkbox {
+  margin: -9px 0;
+}
+
+.rowClicked {
+  cursor: pointer;
+}

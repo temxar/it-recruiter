@@ -1,0 +1,14 @@
+.wrap {
+  width: 1000px;
+  max-width: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 35px;
+}
+
+.error {
+  margin-top: 20px;
+}

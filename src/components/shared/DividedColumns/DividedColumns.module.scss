@@ -1,0 +1,31 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  display: flex;
+  flex: 1 0 auto;
+  height: 100%;
+  padding: 15px 0;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  width: 350px;
+
+  & + & {
+    margin-left: 38px;
+    padding-left: 50px;
+    border-left: 1px solid $border;
+  }
+}
+
+.scroll {
+  height: 100%;
+}
+
+.title {
+  margin-bottom: 22px;
+  font-weight: 500;
+  font-size: 18px;
+}

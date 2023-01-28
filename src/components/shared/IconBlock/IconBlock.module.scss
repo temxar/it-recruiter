@@ -1,0 +1,14 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  display: inline-flex;
+  padding: 5px 9px;
+  background-color: $light2;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: $all;
+
+  &:hover {
+    background-color: $primaryBg;
+  }
+}

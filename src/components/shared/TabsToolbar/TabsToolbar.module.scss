@@ -1,0 +1,14 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 24px;
+}
+
+.right {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: flex-end;
+}

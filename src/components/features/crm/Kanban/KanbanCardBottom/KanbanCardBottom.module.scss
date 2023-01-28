@@ -1,0 +1,51 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  position: relative;
+  margin: 12px -1px -1px -1px;
+  padding: 20px 16px 8px;
+  font-size: 13px;
+  border-top: 1px solid $border;
+  border-right: 1px solid $transparent;
+  border-bottom: 1px solid $transparent;
+  border-left: 1px solid $transparent;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
+  transition: $all;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $lightBg;
+    border-radius: 0 0 5px 5px;
+    transition: $all;
+    content: '';
+  }
+
+  &.hovered:hover {
+    border-color: $borderDark;
+
+    &:before {
+      background-color: $defaultBgHex;
+    }
+
+    .arrow {
+      opacity: 1;
+    }
+  }
+}
+
+.cont {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  position: absolute;
+  top: -11px;
+  left: 15px;
+  z-index: 2;
+}

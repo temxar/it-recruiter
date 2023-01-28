@@ -1,0 +1,130 @@
+@import 'assets/scss/vars';
+
+.wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    transition: $all;
+    content: '';
+  }
+
+  &:not(.checked):hover {
+    &:before {
+      transform: scale(1.5);
+      opacity: 0.03;
+    }
+
+    .cont {
+      opacity: 0.7;
+    }
+  }
+}
+
+.cont {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 300ms ease;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    border-radius: 50%;
+    opacity: 0.05;
+    content: '';
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    opacity: 0.2;
+    content: '';
+  }
+
+  svg {
+    font-size: 12px;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 300ms ease;
+  }
+}
+
+.checked {
+  cursor: default;
+
+  .cont {
+    opacity: 1;
+
+    svg {
+      transform: none;
+      opacity: 1;
+    }
+  }
+}
+
+.tooltip {
+  position: relative;
+  margin-bottom: 5px !important;
+  padding: 2px 10px 4px;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: $font;
+  line-height: 16px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: currentColor;
+    opacity: 0.1;
+    content: '';
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    opacity: 0.2;
+    content: '';
+  }
+}
